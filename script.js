@@ -8,7 +8,7 @@ document.querySelector(".close").addEventListener("click", () => {
 // let covers = [];
 let capLib = [];
 async function getLibrary() {
-    let a = await fetch("library/");
+    let a = await fetch(".library/");
     let b = await a.text();
     // console.log(b)
     let libPage = document.createElement("div");
@@ -34,7 +34,7 @@ async function getLibrary() {
     return library;
 }
 async function getSongs(playlist) {
-    let a = await fetch(`library/${playlist}/`);
+    let a = await fetch(`.library/${playlist}/`);
     let b = await a.text();
     // console.log(b)
     let playlistPage = document.createElement("div");
